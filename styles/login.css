@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "font1";
+  src: url(./font/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: "font2";
+  src: url(./font/Poppins-Medium.ttf);
+}
+
+:root {
+  --coleur1: #42c3a7;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "font2", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+form {
+  background: #fff;
+  padding: 30px 60px 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--coleur1);
+}
+
+h2 {
+  color: #000;
+  font-weight: 900;
+  font-family: "font1";
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+.inputBox {
+  position: relative;
+  width: 300px;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.inputBox input {
+  font-size: 1rem;
+  width: 100%;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #a8a8a8;
+  outline: none;
+  color: #000000;
+  letter-spacing: 0.2rem;
+  transition: 0.2s ease-in;
+}
+
+.inputBox label {
+  position: absolute;
+  left: 0;
+  padding: 10px 0;
+  color: #a8a8a8;
+  letter-spacing: 0.2rem;
+  transition: 0.2s ease-in;
+  user-select: none;
+}
+
+.inputBox input:focus,
+.inputBox input:valid {
+  border-bottom: 2px solid var(--coleur1);
+}
+
+.inputBox input:focus~label,
+.inputBox input:valid~label {
+  color: var(--coleur1);
+  letter-spacing: 0.15em;
+  transform: translateY(-25px);
+  font-size: 0.9rem;
+}
+
+.submit {
+  background: var(--coleur1);
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: -20px;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  width: 55%;
+  transition: 0.3s;
+}
+
+.submit:hover {
+  letter-spacing: 0.15rem;
+  transform: translateY(-1px);
+}
+
+.mdpOublier {
+  text-decoration: none;
+  color: #000;
+  margin-top: 20px;
+  bottom: 20px;
+  right: 50px;
+  position: absolute;
+  transition: 0.5s;
+  user-select: none;
+}
+
+.mdpOublier:hover {
+  color: var(--coleur1);
+}
